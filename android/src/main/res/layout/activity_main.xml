@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/Camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Camerademo"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/BasicMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="BasicMapDemo"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/MapFounctions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="MapFounctions"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/ControlsDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="GestureControlsDemo"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/GestureDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="GestureDemo"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/LiteModeDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="LiteModeDemo"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/TrafficDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="TrafficDemo"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/MoreLanguageDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="MoreLanguageDemo"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/CircleDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="CircleDemo"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/PolylineDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="PolylineDemo"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/PolygonDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="PolygonDemo"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/GroudOverlayDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="GroudOverlayDemo"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/AddMarkerDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="AddMarkerDemo"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/EventsDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="EventsDemo"
+                android:textAllCaps="false"/>
+
+
+            <Button
+                android:id="@+id/DistanceDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="DistanceDemo"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/SearchDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="SearchDemo"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/LocationSourceDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="LocationSourceDemo"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

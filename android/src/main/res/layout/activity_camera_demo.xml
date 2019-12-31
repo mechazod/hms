@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CameraDemoActivity"
+    >
+
+    <fragment
+        android:name="com.huawei.hms.maps.SupportMapFragment"
+        android:id="@+id/mapInCamera"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_gravity="center"
+        android:layout_weight="3"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cameraChange"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MaxZoom--"
+        android:onClick="onSetMaxZoomClamp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MinZoom++"
+        android:onClick="onSetMinZoomClamp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/animateCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="newLatLng"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/moveCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="newCameraPosition"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/getCameraPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cameraPosition"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <!--<Button-->
+        <!--android:id="@+id/newCameraPosition"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="newCameraPosition"-->
+        <!--android:textAllCaps="false"/>-->
+
+        <Button
+            android:id="@+id/setCameraPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="setCameraPosition"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ZoomBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ZoomBy"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/newLatLngBounds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="newLatLngBounds"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:hint="lat"
+            android:textSize="10dp"
+            android:id="@+id/cameraLat"
+            />
+        <EditText
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:hint="lng"
+            android:textSize="10dp"
+            android:id="@+id/cameraLng"
+            />
+        <EditText
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:hint="zoom"
+            android:textSize="10dp"
+            android:id="@+id/cameraZoom"
+            />
+        <EditText
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:hint="tilt"
+            android:textSize="10dp"
+            android:id="@+id/cameraTilt"
+            />
+        <EditText
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:hint="bearing"
+            android:textSize="10dp"
+            android:id="@+id/cameraBearing"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="setCamera"
+            android:onClick="setCameraPosition"/>
+    </LinearLayout>
+
+
+</LinearLayout>

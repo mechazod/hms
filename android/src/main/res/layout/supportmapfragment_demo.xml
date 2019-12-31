@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/supportMap"
+        class="com.huawei.hms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        map:cameraTargetLat="48"
+        map:cameraTargetLng="2"
+        map:cameraZoom="11"
+        map:mapType="normal"
+        map:uiCompass="false"
+        map:uiZoomControls="true"
+        map:zOrderOnTop="false" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/adda"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:onClick="addMarker"
+            android:text="addMarker" />
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="setVisiable"
+            android:onClick="setVisiable"/>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="setFlat"
+            android:onClick="setFlat"/>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="setAlpha"
+            android:onClick="setAlpha"/>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="setAnchor"
+            android:onClick="setAnchor"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="setZIndex"
+            android:onClick="setZIndex"/>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="setRotation"
+            android:onClick="setRotation"/>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="remove"
+            android:onClick="removeMarker"/>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="showInfoWindow"
+            android:onClick="showInfoWindow"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="setIcon"
+            android:onClick="setIcon"/>
+    </LinearLayout>
+
+
+</LinearLayout>
