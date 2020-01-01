@@ -11,18 +11,15 @@ import com.huawei.hms.maps.CameraUpdateFactory;
 import com.huawei.hms.maps.HuaweiMap;
 import com.huawei.hms.maps.MapView;
 import com.huawei.hms.maps.OnMapReadyCallback;
+import com.huawei.hms.maps.model.BitmapDescriptorFactory;
 import com.huawei.hms.maps.model.LatLng;
+import com.huawei.hms.maps.model.MarkerOptions;
 import com.huawei.hms.maps.util.LogM;
 import com.reactlibrary.R;
 
-import android.graphics.Bitmap;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
-import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
 
 public class MapViewDemoActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -31,6 +28,11 @@ public class MapViewDemoActivity extends AppCompatActivity implements OnMapReady
     private HuaweiMap hmap;
 
     private MapView mMapView;
+
+    private double latCurrentLocation;
+    private double lonCurrentLocation;
+    private double latTarget;
+    private double lonTarget;
 
     private static final String MAPVIEW_BUNDLE_KEY = "MapViewBundleKey";
 
@@ -44,6 +46,15 @@ public class MapViewDemoActivity extends AppCompatActivity implements OnMapReady
         if (savedInstanceState != null) {
             mapViewBundle = savedInstanceState.getBundle(MAPVIEW_BUNDLE_KEY);
         }
+
+        Bundle bundle = getIntent().getExtras();
+
+        this.latCurrentLocation = bundle.getDouble("LAT_CURRENT", 0);
+        this.lonCurrentLocation = bundle.getDouble("LON_CURRENT", 0);
+        this.latTarget = bundle.getDouble("LAT_TARGET", 14.402940);
+        this.lonTarget = bundle.getDouble("LON_TARGET", 120.989517);
+
+
         mMapView.onCreate(mapViewBundle);
         mMapView.getMapAsync(this);
     }
@@ -69,9 +80,17 @@ public class MapViewDemoActivity extends AppCompatActivity implements OnMapReady
     @Override
     public void onMapReady(HuaweiMap map) {
         Log.d(TAG, "onMapReady: ");
+
+        LatLng mTarget = new LatLng(this.latTarget, this.lonTarget);
+
         hmap = map;
         hmap.setMyLocationEnabled(false);
-        hmap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(48.893478, 2.334595), 10));
+
+        hmap.moveCamera(CameraUpdateFactory.newLatLngZoom(mTarget, 17));
+
+        hmap.addMarker(new MarkerOptions().position(mTarget)
+                .title("SSS")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.huawei_marker)));
     }
 
     @Override
